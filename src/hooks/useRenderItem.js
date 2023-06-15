@@ -15,8 +15,18 @@ const useRenderItem = () => {
     }
 
     const filteredItems = items.filter((item) => {
-      const itemName = `Elemento ${item.title}`;
-      return itemName.toLowerCase().includes(searchTerm.toLowerCase());
+      for (const key in item) {
+        if (item.hasOwnProperty(key)) {
+          const propertyValue = item[key];
+          if (
+            typeof propertyValue === "string" &&
+            propertyValue.toLowerCase().includes(searchTerm.toLowerCase())
+          ) {
+            return true;
+          }
+        }
+      }
+      return false;
     });
 
     return filteredItems;

@@ -33,7 +33,6 @@ function Products() {
       {items ? (
         <div>
           <h1>Productos totales en la tienda : {items.length}</h1>
-          <h1>Lista de productos:</h1>
 
           <div className="productsCards_container">
             <SearchInput searchTerm={searchTerm} handleSearch={handleSearch} />
@@ -43,7 +42,7 @@ function Products() {
             <ResponsivePagination
               className="pagination"
               current={currentPage}
-              total={filteredItems.length / itemsPerPage}
+              total={Math.ceil(filteredItems.length / itemsPerPage)}
               onPageChange={setCurrentPage}
             />
           </div>
