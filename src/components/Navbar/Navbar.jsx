@@ -12,11 +12,11 @@ export default function Navbar() {
       <div className="nav_icon" onClick={toggleSidebar}>
         <i className="fa fa-bars" aria-hidden="true"></i>
       </div>
-      <div className="navbar__left"></div>
+      <div className="navbar__left">
+        <p>Danny Alejandro Martínez Duque - Bootcamp BIT</p>
+      </div>
       <div className="navbar__right">
-        <a href="#">
-          <img width="30px" src="assets/photo.jpeg" alt="" />
-        </a>
+        <img className="img_nav" width="30px" src="assets/photo.png" alt="" />
       </div>
     </nav>
   );

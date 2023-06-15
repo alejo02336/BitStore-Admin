@@ -70,7 +70,7 @@ export default function Sidebar() {
           className="sidebar__logout"
         >
           <i className="fa fa-power-off"></i>
-          <a href="#">Cerrar sesión</a>
+          Cerrar sesión
         </div>
       </div>
     </div>

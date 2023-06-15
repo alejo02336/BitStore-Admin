@@ -52,15 +52,17 @@
   padding: 7px;
 }
 
-/* nose */
-
-.active_menu_link {
-  background: rgba(62, 161, 117, 0.3);
-  color: #3ea175;
+.img_nav {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  object-position: center;
 }
 
-.active_menu_link a {
-  color: #3ea175 !important;
+.active_menu_link {
+  background-color: #ff6000;
 }
 
 @media only screen and (max-width: 978px) {

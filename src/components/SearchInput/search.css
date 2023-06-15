@@ -1,6 +1,8 @@
 .search_input {
   padding: 10px;
   border-radius: 50px;
+  border: 1px solid #ccc;
+  padding-left: 1rem;
   align-self: end;
   margin-right: 25px;
   width: 40%;
