@@ -38,9 +38,7 @@ function Products() {
           <div className="productsCards_container">
             <SearchInput searchTerm={searchTerm} handleSearch={handleSearch} />
 
-            {renderItems(ProductCard).map((item, index) => (
-              <React.Fragment key={index}>{item}</React.Fragment>
-            ))}
+            {renderItems(ProductCard).map((item) => item)}
 
             <ResponsivePagination
               className="pagination"

@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const useRenderItem = () => {
+  const navigate = useNavigate();
   const [items, setItems] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
@@ -28,7 +30,7 @@ const useRenderItem = () => {
 
     const itemsToRender = filteredItems
       .slice(startIndex, endIndex)
-      .map((item, index) => Component({ item, index }));
+      .map((item, index) => Component({ item, index, navigate }));
 
     return itemsToRender;
   };

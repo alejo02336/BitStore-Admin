@@ -1,9 +1,21 @@
 import React from "react";
 import "./productCard.css";
 
-function ProductCard({ item: product }) {
+function ProductCard({ item: product, index, navigate }) {
+  const handleProductClick = () => {
+    navigate(`/productDetail/${product.id}`, {
+      state: {
+        product,
+      },
+    });
+  };
+
   return (
-    <div className="cartItem_container">
+    <div
+      key={index}
+      onClick={handleProductClick}
+      className="cartItem_container"
+    >
       <div className="cart_info">
         <img className="cart_img" src={product.image} alt="" />
         <div>

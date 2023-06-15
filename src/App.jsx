@@ -7,6 +7,7 @@ import "./App.css";
 import Products from "./pages/Products/Products";
 import Carts from "./pages/Carts/Carts";
 import Income from "./pages/Income/Income";
+import ProductDetail from "./pages/Products/ProductDetail";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/carts" element={<Carts />} />
           <Route path="/income" element={<Income />} />
+          <Route path="/productDetail/:productId" element={<ProductDetail />} />
         </Routes>
       </div>
     </BrowserRouter>
