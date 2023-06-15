@@ -27,20 +27,10 @@ export default function Sidebar() {
       </div>
 
       <div className="sidebar__menu">
-        <NavLink
-          onClick={closeSidebar}
-          to="/BitStore-Admin/"
-          className={({ isActive }) =>
-            isActive ? "sidebar__link active_menu_link" : "sidebar__link"
-          }
-        >
-          <i className="fa fa-home"></i>
-          Principal
-        </NavLink>
         <h2>Modulo de gestión</h2>
         <NavLink
           onClick={closeSidebar}
-          to="/BitStore-Admin/products"
+          to="/BitStore-Admin/"
           className={({ isActive }) =>
             isActive ? "sidebar__link active_menu_link" : "sidebar__link"
           }
