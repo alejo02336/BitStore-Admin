@@ -34,7 +34,7 @@ export default function Sidebar() {
           }
         >
           <i className="fa fa-home"></i>
-          <a href="#">Principal</a>
+          Principal
         </NavLink>
         <h2>Modulo de gestión</h2>
         <NavLink
@@ -45,7 +45,7 @@ export default function Sidebar() {
           }
         >
           <i className="fa fa-user-secret" aria-hidden="true"></i>
-          <a href="#">Productos</a>
+          Productos
         </NavLink>
         <NavLink
           onClick={closeSidebar}
@@ -55,7 +55,7 @@ export default function Sidebar() {
           }
         >
           <i className="fa fa-building-o"></i>
-          <a href="#">Carritos</a>
+          Carritos
         </NavLink>
         <NavLink
           to="/income"
@@ -65,7 +65,7 @@ export default function Sidebar() {
           }
         >
           <i className="fa fa-wrench"></i>
-          <a href="#">Ingresos</a>
+          Ingresos
         </NavLink>
 
         <div className="sidebar__logout">

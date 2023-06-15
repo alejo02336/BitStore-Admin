@@ -35,6 +35,12 @@ body {
   color: #3b9668;
 }
 
+.content {
+  background-color: white;
+  width: 100%;
+  grid-column: 2 / -1;
+}
+
 .container {
   display: grid;
   height: 100vh;
@@ -54,5 +60,9 @@ body {
     grid-template-areas:
       "nav"
       "main";
+  }
+
+  .content {
+    grid-column: 1 / -1;
   }
 }
