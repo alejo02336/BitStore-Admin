@@ -1,0 +1,49 @@
+.carousel {
+  width: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+  border-radius: 10px;
+}
+
+.carousel .slide {
+  background-color: black;
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel .slide .product-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.carousel .slide .product-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.carousel .slide .product-price {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.carousel .slide .product-quantity {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}

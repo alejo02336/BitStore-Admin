@@ -37,7 +37,7 @@ body {
 
 .content {
   background-color: white;
-  width: 100%;
+
   grid-column: 2 / -1;
 }
 
