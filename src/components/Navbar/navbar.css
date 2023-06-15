@@ -51,3 +51,26 @@
   box-shadow: 2px 2px 5px #d9d9d9, -2px -2px 5px #ffffff;
   padding: 7px;
 }
+
+/* nose */
+
+.active_menu_link {
+  background: rgba(62, 161, 117, 0.3);
+  color: #3ea175;
+}
+
+.active_menu_link a {
+  color: #3ea175 !important;
+}
+
+@media only screen and (max-width: 978px) {
+  .nav_icon {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar__left {
+    display: none;
+  }
+}
