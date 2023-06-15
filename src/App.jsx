@@ -17,11 +17,14 @@ export default function App() {
         <Sidebar />
 
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/carts" element={<Carts />} />
-          <Route path="/income" element={<Income />} />
-          <Route path="/productDetail/:productId" element={<ProductDetail />} />
+          <Route path="/BitStore-Admin" element={<Dashboard />} />
+          <Route path="/BitStore-Admin/products" element={<Products />} />
+          <Route path="/BitStore-Admin/carts" element={<Carts />} />
+          <Route path="/BitStore-Admin/income" element={<Income />} />
+          <Route
+            path="/BitStore-Admin/productDetail/:productId"
+            element={<ProductDetail />}
+          />
         </Routes>
       </div>
     </BrowserRouter>

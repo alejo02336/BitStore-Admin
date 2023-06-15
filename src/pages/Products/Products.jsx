@@ -32,9 +32,13 @@ function Products() {
     <div className="content">
       {items ? (
         <div>
-          <h1>Productos totales en la tienda : {items.length}</h1>
-
           <div className="productsCards_container">
+            <div className="info-container">
+              <div className="info-card">
+                <h2 className="info-title">Productos totales en la tienda:</h2>
+                <p className="info-value">{items.length}</p>
+              </div>
+            </div>
             <SearchInput searchTerm={searchTerm} handleSearch={handleSearch} />
 
             {renderItems(ProductCard).map((item) => item)}

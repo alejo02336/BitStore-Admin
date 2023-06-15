@@ -3,7 +3,7 @@ import "./productCard.css";
 
 function ProductCard({ item: product, index, navigate }) {
   const handleProductClick = () => {
-    navigate(`/productDetail/${product.id}`, {
+    navigate(`/BitStore-Admin/productDetail/${product.id}`, {
       state: {
         product,
       },

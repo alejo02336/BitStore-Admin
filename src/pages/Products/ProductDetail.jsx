@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import "./productDetail.css";
+import Swal from "sweetalert2";
 
 function ProductDetail() {
   const { state } = useLocation();
@@ -21,7 +22,16 @@ function ProductDetail() {
         <p className="detail_description">{state.product.description}</p>
 
         <div className="detail_buttons">
-          <button onClick={null} className="add_cart">
+          <button
+            onClick={() => {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Funcionalidad no disponible",
+              });
+            }}
+            className="add_cart"
+          >
             Add to cart
           </button>
           <button onClick={handleGoBack} className="go_cart add_cart">

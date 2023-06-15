@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import Swal from "sweetalert2";
 
 import "./sidebar.css";
 import { NavLink } from "react-router-dom";
@@ -14,7 +15,7 @@ export default function Sidebar() {
     <div id="sidebar">
       <div className="sidebar__title">
         <div className="sidebar__img">
-          <img src="assets/logo.png" alt="logo" />
+          <img src="assets/bit.png" alt="logo" />
           <h1>BITSTORE</h1>
         </div>
         <i
@@ -28,7 +29,7 @@ export default function Sidebar() {
       <div className="sidebar__menu">
         <NavLink
           onClick={closeSidebar}
-          to="/"
+          to="/BitStore-Admin/"
           className={({ isActive }) =>
             isActive ? "sidebar__link active_menu_link" : "sidebar__link"
           }
@@ -39,36 +40,45 @@ export default function Sidebar() {
         <h2>Modulo de gestión</h2>
         <NavLink
           onClick={closeSidebar}
-          to="/products"
+          to="/BitStore-Admin/products"
           className={({ isActive }) =>
             isActive ? "sidebar__link active_menu_link" : "sidebar__link"
           }
         >
-          <i className="fa fa-user-secret" aria-hidden="true"></i>
+          <i className="fa fa-archive" aria-hidden="true"></i>
           Productos
         </NavLink>
         <NavLink
           onClick={closeSidebar}
-          to="/carts"
+          to="/BitStore-Admin/carts"
           className={({ isActive }) =>
             isActive ? "sidebar__link active_menu_link" : "sidebar__link"
           }
         >
-          <i className="fa fa-building-o"></i>
+          <i className="fa fa-shopping-cart"></i>
           Carritos
         </NavLink>
         <NavLink
-          to="/income"
+          to="/BitStore-Admin/income"
           onClick={closeSidebar}
           className={({ isActive }) =>
             isActive ? "sidebar__link active_menu_link" : "sidebar__link"
           }
         >
-          <i className="fa fa-wrench"></i>
+          <i className="fa fa-money"></i>
           Ingresos
         </NavLink>
 
-        <div className="sidebar__logout">
+        <div
+          onClick={() => {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Funcionalidad no disponible",
+            });
+          }}
+          className="sidebar__logout"
+        >
           <i className="fa fa-power-off"></i>
           <a href="#">Cerrar sesión</a>
         </div>

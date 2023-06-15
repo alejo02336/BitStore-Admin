@@ -13,7 +13,7 @@ function Income() {
   return (
     <div className="content">
       {topSellingProducts.length > 0 ? (
-        <div>
+        <div className="selling_container">
           <h1 className="section-title">Productos más vendidos</h1>
           <Carousel
             showArrows={true}
@@ -45,8 +45,16 @@ function Income() {
             ))}
           </Carousel>
 
-          <h1>Ingresos totales generados: ${totalVentas.toFixed(2)}</h1>
-          <h1>Precio promedio de los productos: ${averagePrice.toFixed(2)}</h1>
+          <div className="info-container">
+            <div className="info-card">
+              <h2 className="info-title">Ingresos totales generados</h2>
+              <p className="info-value">${totalVentas.toFixed(2)}</p>
+            </div>
+            <div className="info-card">
+              <h2 className="info-title">Precio promedio de los productos</h2>
+              <p className="info-value">${averagePrice.toFixed(2)}</p>
+            </div>
+          </div>
 
           <SalesChart topSellingProducts={topSellingProducts} />
         </div>
