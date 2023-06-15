@@ -6,6 +6,7 @@ import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/bootstrap.css";
 import { useRenderItem } from "../../hooks/useRenderItem";
 import ProductCard from "../../components/Products/ProductCard";
+import SearchInput from "../../components/SearchInput/SearchInput";
 
 function Products() {
   const {
@@ -33,21 +34,21 @@ function Products() {
         <div>
           <h1>Productos totales en la tienda : {items.length}</h1>
           <h1>Lista de productos:</h1>
-          <input
-            type="text"
-            placeholder="Buscar..."
-            value={searchTerm}
-            onChange={handleSearch}
-          />
-          {renderItems(ProductCard).map((item, index) => (
-            <React.Fragment key={index}>{item}</React.Fragment>
-          ))}
 
-          <ResponsivePagination
-            current={currentPage}
-            total={filteredItems.length / itemsPerPage}
-            onPageChange={setCurrentPage}
-          />
+          <div className="productsCards_container">
+            <SearchInput searchTerm={searchTerm} handleSearch={handleSearch} />
+
+            {renderItems(ProductCard).map((item, index) => (
+              <React.Fragment key={index}>{item}</React.Fragment>
+            ))}
+
+            <ResponsivePagination
+              className="pagination"
+              current={currentPage}
+              total={filteredItems.length / itemsPerPage}
+              onPageChange={setCurrentPage}
+            />
+          </div>
         </div>
       ) : (
         <Loader />
