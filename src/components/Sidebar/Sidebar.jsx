@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import "./sidebar.css";
+import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
   const closeSidebar = () => {
@@ -25,23 +26,47 @@ export default function Sidebar() {
       </div>
 
       <div className="sidebar__menu">
-        <div className="sidebar__link active_menu_link">
+        <NavLink
+          onClick={closeSidebar}
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "sidebar__link active_menu_link" : "sidebar__link"
+          }
+        >
           <i className="fa fa-home"></i>
           <a href="#">Principal</a>
-        </div>
+        </NavLink>
         <h2>Modulo de gestión</h2>
-        <div className="sidebar__link">
+        <NavLink
+          onClick={closeSidebar}
+          to="/products"
+          className={({ isActive }) =>
+            isActive ? "sidebar__link active_menu_link" : "sidebar__link"
+          }
+        >
           <i className="fa fa-user-secret" aria-hidden="true"></i>
           <a href="#">Productos</a>
-        </div>
-        <div className="sidebar__link">
+        </NavLink>
+        <NavLink
+          onClick={closeSidebar}
+          to="/carts"
+          className={({ isActive }) =>
+            isActive ? "sidebar__link active_menu_link" : "sidebar__link"
+          }
+        >
           <i className="fa fa-building-o"></i>
           <a href="#">Carritos</a>
-        </div>
-        <div className="sidebar__link">
+        </NavLink>
+        <NavLink
+          to="/income"
+          onClick={closeSidebar}
+          className={({ isActive }) =>
+            isActive ? "sidebar__link active_menu_link" : "sidebar__link"
+          }
+        >
           <i className="fa fa-wrench"></i>
           <a href="#">Ingresos</a>
-        </div>
+        </NavLink>
 
         <div className="sidebar__logout">
           <i className="fa fa-power-off"></i>
